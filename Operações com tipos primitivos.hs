@@ -21,7 +21,7 @@ exemplo2Bool x y z
 
 -- Int
 areaQuadrado :: Int -> Int
-areaQuadrado x = x*2
+areaQuadrado x = x*x
 
 areaTriangulo :: Int -> Int -> Int
 areaTriangulo x y = (x*y)/2
