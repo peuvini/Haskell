@@ -28,3 +28,28 @@ parDeListas x = unzip x
 {- Dada uma lista de reais, elabore uma função para calcular a soma dos valores da lista maiores ou iguais a 5.0 -}
 maioresIgualQueCinco :: [Float] -> [Float]
 maioresIgualQueCinco listNum = [i| i<-listNum, i>= 5.0]
+
+{- Faça uma função que dada uma string e um inteiro representando um tamanho máximo de impressão para uma informação, devolve a mesma string justificada à direita, 
+deixando espaços em branco na frente da string, se for o caso. Ex: se você fornecer “papagaio” e 15 de tamanho, a função deve retornar “       papagaio”,  
+incluindo assim 7 espaços em branco à esquerda de papagaio que tem 8 caracteres, 
+para completar os 15 caracteres de tamanho reservados. -}
+espacoNaFrente :: String -> Int -> String
+espacoNaFrente str int = espacos ++ str
+                       where
+                        espacos = replicate int ' '
+
+{- Dada uma lista de reais, elabore uma função para calcular a média dos valores da lista -}
+mediaLista :: [Float] -> Float
+mediaLista lNum = soma/fromIntegral(tamanho)
+                where
+                    soma = sum lNum
+                    tamanho = length lNum
+{- Dada uma lista de notas de alunos, elabore uma função para determinar a lista das notas acima da média das notas da lista. -}
+acimaMedia :: [Float] -> [Float]
+acimaMedia notas = [i |i<-notas , i> media]
+                 where
+                    media = (sum notas) / fromIntegral(length notas)
+
+{- Escreva um função que dada uma string, devolva a mesma string com o caracter \n ao final. Ex: se a entrada for “gato” retornará “gato\n”. -}
+caracterNoFinal :: String -> String
+caracterNoFinal str = str ++ "\n"
