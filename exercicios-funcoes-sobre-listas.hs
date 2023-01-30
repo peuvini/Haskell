@@ -53,3 +53,4 @@ acimaMedia notas = [i |i<-notas , i> media]
 {- Escreva um função que dada uma string, devolva a mesma string com o caracter \n ao final. Ex: se a entrada for “gato” retornará “gato\n”. -}
 caracterNoFinal :: String -> String
 caracterNoFinal str = str ++ "\n"
+
